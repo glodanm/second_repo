@@ -1,17 +1,17 @@
-#include "BookShopHeader.h"
-#include "bookHead.h"
+#include "BookShop.h"
+#include "bookDescription.h"
 
-void BookShop::inputBooks(int n) {
+void BookShop::inputBooks(int n) { //n is a simple variable
 	for (int i = 0; i < n; i++) {
-		this->books[i].InputBook();
+		this->books[i].inputBooks();
 		}
 }
 void BookShop::outputBooks(int n) {
 	for (int i = 0; i < n; i++) {
-		this->books[i].OutputBook();
+		this->books[i].outputBooks();
 	}
 }
-void BookShop::SortBooksByPrice(int n) {
+void BookShop::sortBooksByPrice(int n) {
 	Book price;
 			for (int i = 0; i < n - 1; i++)
 			for (int j = n - 1; j >= i + 1; j--)
@@ -22,7 +22,7 @@ void BookShop::SortBooksByPrice(int n) {
 					this->books[j - 1] = price;
 				}
 }
-void BookShop::SortBooksBySales(int n) {
+void BookShop::sortBooksBySales(int n) {
 	Book sales;
 	for (int i = 0; i < n - 1; i++)
 		for (int j = n - 1; j >= i + 1; j--)

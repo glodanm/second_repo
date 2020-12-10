@@ -1,4 +1,4 @@
-#include "bookHead.h"
+#include "bookDescription.h"
 Book::Book(int price, int numberOfPages, string author, int quantity, int numberOfSales, string name) {
 	this->price = price;
 	this->numberOfPages = numberOfPages;
@@ -16,25 +16,24 @@ Book::Book() {
 	this->numberOfSales = 0;
 	this->name = "";
 }
-void Book::InputBook() {
+void Book::inputBooks() {
 	cout << "Enter price: ";
 	cin >> this->price;
 	cout << "Enter number of pages: ";
 	cin >> this->numberOfPages;
-	cin.ignore(32767, '\n');
+	cin.ignore();
 	cout << "Enter author: ";
 	getline(cin,this->author);
 	cout << "Enter quantity: ";
 	cin >> this->quantity;
 	cout << "Enter number of sales: ";
 	cin >> this->numberOfSales;
-	cin.ignore(32767, '\n');
+	cin.ignore();
 	cout << "Enter name: ";
 	getline(cin,this->name);
 
-
 }
-void Book::OutputBook() {
+void Book::outputBooks() {
 	cout << "Price:"<<this->price<<endl;
 	cout << "Number of pages"<<this->numberOfPages<<endl;
 	cout << "Author:"<< this->author<<endl;

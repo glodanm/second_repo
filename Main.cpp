@@ -1,5 +1,5 @@
-#include "bookHead.h"
-#include "BookShopHeader.h"
+#include "bookDescription.h"
+#include "BookShop.h"
 int main() {
 	int n;
 	BookShop B;
@@ -7,11 +7,11 @@ int main() {
 	cin >> n;
 	B.inputBooks(n);
 	cout << "<<<<---Our books--->>>>" << endl;
-	B.outputBooks(n);
-	B.SortBooksByPrice(2);
+	B.inputBooks(n);
+	B.sortBooksByPrice(2);
 	cout << "<<-- Sorting Books By Price--->>"<<endl;
-	B.outputBooks(2); 
-	B.SortBooksBySales(2);
+	B.outputBooks(2);
+	B.sortBooksBySales(2);
 	cout << "<<---Sorting Books By Sales--->>" << endl;
 	B.outputBooks(2);
 	system("pause");
